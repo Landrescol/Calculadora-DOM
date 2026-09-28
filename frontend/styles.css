@@ -1,0 +1,192 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ===== CALCULADORA ===== */
+.calculator {
+    background: #f5f5f7;
+    border-radius: 30px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Display */
+.display {
+    background: #000;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.entrada {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 300;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-height: 120px;
+    overflow-y: auto;
+    line-height: 1.2;
+}
+
+/* Grid de botones */
+.botones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Botones de números */
+.btn-numero {
+    background: #fff;
+    color: #000;
+}
+
+.btn-numero:hover {
+    background: #e8e8e8;
+}
+
+/* Botones de operadores */
+.btn-operador {
+    background: #667eea;
+    color: #fff;
+}
+
+.btn-operador:hover {
+    background: #5568d3;
+}
+
+/* Botones funcionales (AC, C) */
+.btn-funcional {
+    background: #a5a5a7;
+    color: #fff;
+}
+
+.btn-funcional:hover {
+    background: #8a8a8c;
+}
+
+/* Botón de igual */
+.btn-igual {
+    background: #34c759;
+    color: #fff;
+    grid-column: 2 / 4;
+}
+
+.btn-igual:hover {
+    background: #30b050;
+}
+
+/* Botón 0 ocupa 2 columnas */
+.btn-cero {
+    grid-column: 1 / 3;
+}
+
+/* ===== PANEL DE RAZONAMIENTO ===== */
+.razonamiento-panel {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.razonamiento-panel.visible {
+    display: block;
+}
+
+.razonamiento-panel h3 {
+    margin-bottom: 20px;
+    color: #667eea;
+    font-size: 20px;
+}
+
+.razonamiento-content {
+    background: #f9f9f9;
+    border-left: 4px solid #667eea;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.razonamiento-content p {
+    margin: 8px 0;
+    padding: 5px;
+}
+
+.razonamiento-content p strong {
+    color: #667eea;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        gap: 20px;
+    }
+    
+    .calculator {
+        width: 100%;
+    }
+    
+    .entrada {
+        font-size: 36px;
+    }
+    
+    .razonamiento-panel {
+        max-width: 100%;
+        order: 2;
+    }
+}

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <!-- Pantalla de display -->
+            <div class="display">
+                <div class="entrada">0</div>
+            </div>
+            
+            <!-- Grid de botones -->
+            <div class="botones-grid">
+                <!-- Fila 1: AC, C, % -->
+                <button class="btn btn-funcional" data-action="ac">AC</button>
+                <button class="btn btn-funcional" data-action="c">C</button>
+                <button class="btn btn-operador" data-operator="%">%</button>
+                
+                <!-- Fila 2: 7, 8, 9, ÷ -->
+                <button class="btn btn-numero" data-numero="7">7</button>
+                <button class="btn btn-numero" data-numero="8">8</button>
+                <button class="btn btn-numero" data-numero="9">9</button>
+                <button class="btn btn-operador" data-operator="/">÷</button>
+                
+                <!-- Fila 3: 4, 5, 6, × -->
+                <button class="btn btn-numero" data-numero="4">4</button>
+                <button class="btn btn-numero" data-numero="5">5</button>
+                <button class="btn btn-numero" data-numero="6">6</button>
+                <button class="btn btn-operador" data-operator="*">×</button>
+                
+                <!-- Fila 4: 1, 2, 3, - -->
+                <button class="btn btn-numero" data-numero="1">1</button>
+                <button class="btn btn-numero" data-numero="2">2</button>
+                <button class="btn btn-numero" data-numero="3">3</button>
+                <button class="btn btn-operador" data-operator="-">−</button>
+                
+                <!-- Fila 5: 0, . (punto), = -->
+                <button class="btn btn-numero btn-cero" data-numero="0">0</button>
+                <button class="btn btn-numero" data-numero=".">.</button>
+                <button class="btn btn-igual" data-action="igual">=</button>
+                <button class="btn btn-operador" data-operator="+">+</button>
+            </div>
+        </div>
+        
+        <!-- Panel de razonamiento (oculto por defecto) -->
+        <div class="razonamiento-panel">
+            <h3>Mi Razonamiento</h3>
+            <div class="razonamiento-content"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
